@@ -1,0 +1,46 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.521)), url("../images/h1bpage.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+      
+  }
+  .center_div {
+    /* margin: 0; */
+    position: absolute;
+    top: 40%;
+    /* -ms-transform: translateY(-50%); */
+    transform: translateY(30%);
+    /* padding-left: 300px; */
+  }
+  label{
+      color: white;
+  }
+  h2{
+      color: white !important;
+  }
+
+  .container {
+    height: 50vh;
+    position: relative;
+  }
+  form{
+      align-items: center;
+      text-align: center;
+  }
+
+  input{
+      width: 300px;
+  }
+
+  .col{
+      color: white;
+  }
+
+  .logout{  
+    text-align: right;
+    margin-right: 20px;
+    padding-top: 20px;
+  
+    }

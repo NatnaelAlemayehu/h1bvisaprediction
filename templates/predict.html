@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>H1B visa prediction page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/h1b.css')}}">
+</head>
+
+
+  <body>
+    <div class="logout">
+      
+      <a href="{{url_for('logout')}}" style="color: white !important; text-decoration: underline;">Logout</a>
+    </div>
+    <br />
+    <br />
+
+    <div class="container center_div">
+      <div class="row">
+        <div class="col">
+          
+          <form method="POST" action="">
+            <h1>H1B Visa Status Predictor</h1> <br /> <br />
+            {{form.hidden_tag()}} Your employers / company name {{form.companyname}}
+            <br />
+            <br />
+            Are you employed full time? {{form.jobtype}}
+            <br />
+            <br />
+            What is your occupation category ? {{form.occupationcategory}}
+            <br />
+            <br />
+            How much are you going to earn per year in the job in US dollar (You should be earning minimum of 10000)
+            {{form.prevailingwage}}
+            <br />
+            <br />
+            {{form.submit}}
+            <br />
+            <br />
+            <br />
+            <h2>{{modelresult}}</h2>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
